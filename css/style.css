@@ -1,0 +1,355 @@
+/* საწყისები */
+:root
+{
+  --PadNo: 1;
+  --MargNo: 1;
+  --HeadBGcolor: 215, 87%, 46%;
+  --SectionBGclor: 0, 0%, 100%;
+  --WHite: 0, 0%, 100%;
+  --Black: 0, 0%, 0%;
+}
+body,h1,h2,h3,h4,h5,h6,p,nav,
+li,ul
+{
+  margin: var(--MargNo);
+  padding: var(--PadNo);
+}
+body
+{
+  overflow-x: hidden;
+}
+
+/* საერთოები */
+header,
+#navigation,
+#navigation .nav-lists,
+#navigation .search::before,
+#navigation .button,
+#de-article,
+#de-article .section,
+#de-article .wrapper,
+#de-article .box,
+#navigation .search-info,
+aside .tools
+{
+  display: flex;
+}
+#navigation,
+#de-article .box,
+#navigation .nav-lists,
+aside .tools
+{
+  align-items: center;
+}
+header,
+#de-article,
+aside .tools
+{
+  justify-content: center;
+}
+#de-article .box,
+#navigation .nav-lists
+{
+  flex-direction: column;
+}
+#navigation .nav-lists,
+#de-article .wrapper
+{
+  justify-content: space-between;
+}
+header .nav-bar fieldset
+{
+  border: none;
+}
+#navigation .nav-lists,
+#navigation .burger-menu,
+#navigation .left
+{
+  margin-left: auto;
+}
+#navigation .nav-lists
+{
+  list-style-type: none;
+}
+#navigation .nav-lists a,
+#navigation .cta-btn
+{
+  text-decoration: none;
+}
+header .nav-bar label,
+header .nav-bar legend,
+header .nav-bar input,
+aside .tools
+{
+  display: none;
+}
+header
+{
+  position: relative;
+}
+#navigation .nav-lists
+{
+  position: absolute;
+}
+#navigation .nav-lists.active
+{
+  display: flex;
+}
+/* კერძოო */
+header
+{
+  background-color: hsl(var(--HeadBGcolor));
+}
+header .wrapper
+{
+  width: 400px;
+  height: 100px;
+  padding: 0px 90px;
+  /* background-color: rebeccapurple; */
+}
+#navigation .remove
+{
+  background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="white" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  /* background-color: hsl(var(--WHite)); */
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 95px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+}
+#navigation .nav-lists
+{
+  background-color: hsl(var(--Black));
+  width: 100%;
+  right: 0;
+  top: 0px;
+  height: 100vh;
+  line-height: 50px;
+  display: none;
+}
+#navigation .burger-menu
+{
+  cursor: pointer;
+}
+#navigation .search-info
+{
+  display: none;
+}
+#navigation .burger-menu .bars
+{
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: hsl(var(--WHite));
+}
+#navigation .nav-lists a
+{
+  color: hsl(var(--WHite));
+}
+#navigation .cta-btn
+{
+  background-color: hsl(var(--WHite));
+  color: hsl(var(--Black));
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+#navigation .search::before
+{
+  content: '';
+  background-image: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="white" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>');
+  width: 25px;
+  height: 25px;
+  /* background-color: indianred; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  cursor: pointer;
+}
+#navigation .button::before
+{
+  content: '';
+  width: 2px;
+  height: 30px;
+  background-color: hsl(var(--WHite));
+  margin-right: 20px;
+}
+
+/* end off header */
+
+
+/* open section */
+
+#de-article 
+{
+  background-color: hsl(var(--SectionBGclor));
+}
+#de-article .wrapper
+{
+  /* background-color: red; */
+  width: 1170px;
+  padding: 40px 0;
+  flex-wrap: wrap;
+}
+#de-article .box
+{
+  width: 100%;
+  /* background-color: royalblue; */
+  padding: 40px 0;
+}
+#de-article .box h2
+{
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#de-article .img-binder-1,
+#de-article .img-binder-2,
+#de-article .img-binder-3
+{
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 45px 35px;
+}
+#de-article .img-binder-1 i,
+#de-article .img-binder-2 i,
+#de-article .img-binder-3 i
+{
+  text-indent: 15px;
+  font-size: 25px;
+}
+#de-article .img-binder-1
+{
+  background-image: url(../images/background-img-1.jpg);
+}
+#de-article .img-binder-2
+{
+  background-image: url(../images/background-img-2.jpg);
+}
+
+#de-article .img-binder-3
+{
+  background-image: url(../images/background-img-3.jpg);
+}
+#de-article .box .description-size
+{
+  width: 300px;
+  text-align: center;
+}
+
+#go-up
+{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+#go-up i
+{
+  font-size: 25px;
+  width: 20px;
+  height: 20px;
+}
+/* მორგებადი განლაგება ლეპტოპის ზომა */
+
+
+@media only screen and (min-width: 998px) {
+  header .wrapper
+  {
+    background-color: inherit;
+    width: 998px;
+  }
+  #de-article .wrapper
+  {
+    width: 998px;
+    padding: 100px 0;
+  }
+  #navigation .nav-lists
+  {
+    position: static;
+    flex-direction: row;
+    height: initial;
+    width: 45%;
+    display: flex;
+  }
+  #navigation .burger-menu,
+  #navigation .search-info
+  {
+    display: none;
+  }
+  #de-article .box
+{
+  width: 30%;
+  /* background-color: royalblue; */
+  padding: 40px 0;
+}
+#navigation .nav-lists
+{
+  background-color: inherit;
+}
+#navigation .search-info
+{
+  display: flex;
+}
+#navigation .button .cta-btn
+{
+  display: flex;
+  align-items: center;
+}
+#navigation .remove
+{
+  display: none;
+}
+aside .tools
+{
+  position: fixed;
+  right: 0;
+  top: 150px;
+  height: 70px;
+  width: 70px;
+  background-color: gray;
+  cursor: pointer;
+}
+aside .tools i
+{
+  font-size: 40px;
+}
+aside .tools i:hover
+{
+  color: white;
+}
+aside .tools .content
+{
+  position: absolute;
+  top: 70px;
+  background-color: gray;
+  width: 250px;
+  display: none;
+}
+aside .tools .content.active
+{
+  display: block;
+}
+#go-up
+{
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  cursor: pointer;
+}
+#go-up i
+{
+  font-size: 25px;
+  width: 20px;
+  height: 20px;
+}
+aside .tools
+{
+  display: flex;
+}
+}
